@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    </style>
+    <title>Technical frontend support</title>
+</head>
+
+<body>
+    <div id="main_box">
+
+        <div class="section-title">Bundle & Save</div>
+
+        <!-- 1 Pair -->
+        <div class="bundle-box" onclick="selectBundle(1)">
+            <div class="top-row">
+                <div class="left">
+                    <input type="radio" name="bundle" class="radio-btn" id="b1" />
+                    <div class="middle">
+                        <h4>1 Unit <button class="btn ">10% OFF</button><h4><br><span>Standard Price</span>
+                    </div>
+                </div>
+                <div class="discount middle">$10.00 USD
+                    <br><small>$24.00 USD</small>
+                </div>     
+            </div>
+           
+            <div class="dropdowns" id="dropdowns1">
+                <div>
+                    #1 Size:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    Colour:
+                    <select>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+                <div>
+                  
+                    #2 Size:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    Colour:
+                    <select>
+                        <option>Colour</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 Pair -->
+        <div class="bundle-box" onclick="selectBundle(2)">
+            <div class="top-row">
+                <div class="left">
+                    <input type="radio" name="bundle" class="radio-btn" id="b2" />
+                    <div class="middle">
+                        <h4>2 Unit <button class="btn ">20% OFF</button>
+                            
+                            <span class="tag">Most Popular</span>
+                        </h4>
+                    </div>
+                </div>
+              <div class="discount middle">$18.00 USD
+                <br><small>$24.00 USD</small>
+              </div>
+            </div>
+            <div class="dropdowns" id="dropdowns2">
+                <div>
+                    #1 Size:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    Colour:
+                    <select>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+                <div>
+                    #2 Size:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    Colour:
+                    <select>
+                        <option>Colour</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Pair -->
+        <div class="bundle-box" onclick="selectBundle(3)">
+            <div class="top-row">
+                <div class="left">
+                    <input type="radio" name="bundle" class="radio-btn" id="b3" />
+                    <div class="middle">
+                        <h4>3 Unit <button class="btn">30% OFF</button></h4>
+                    </div>
+                </div>
+               <div class="discount  middle">$24.00 USD
+                <br><small>$24.00 USD</small>
+               </div>
+            </div>
+            <div class="dropdowns" id="dropdowns3">
+                
+                <div>
+                    #1 Size:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    Colour:
+                    <select>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+                <div>
+                    #2 Size:
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    Colour:
+                    <select>
+                        <option>Colour</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="shipping">Free 2 Day Shipping <span class="total">Total $18.00 USD</span></div><br>
+        
+        
+        <button class="add-to-cart">+ Add to Cart</button>
+         <span class="powered">@Powered by Pumper</span>
+
+        <script>
+            function selectBundle(bundle) {
+                const boxes = document.querySelectorAll('.bundle-box');
+                const radios = document.querySelectorAll('.radio-btn');
+                const dropdowns1 = document.getElementById('dropdowns1');
+                const dropdowns2 = document.getElementById('dropdowns2');
+                const dropdowns3 = document.getElementById('dropdowns3');
+
+                boxes.forEach(box => box.classList.remove('selected'));
+                radios.forEach(r => r.checked = false);
+                dropdowns1.style.display = 'none';
+                dropdowns2.style.display = 'none';
+                dropdowns3.style.display = 'none';
+
+                // Mark selected
+                boxes[bundle - 1].classList.add('selected');
+                radios[bundle - 1].checked = true;
+
+                // Show dropdowns if 1, 2 or 3 pairs
+                if (bundle === 1) dropdowns1.style.display = 'block';
+                if (bundle === 2) dropdowns2.style.display = 'block';
+                if (bundle === 3) dropdowns3.style.display = 'block';
+            }
+            </script>
+
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        </body>
+    </html>

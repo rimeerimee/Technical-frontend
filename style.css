@@ -1,0 +1,163 @@
+/* main section */
+
+ #main_box{
+ width: 362px;
+height: 503px;
+background-color: white;
+margin:10px auto ;
+
+}
+
+/*  start body */
+
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      padding: 20px;
+      color: #000;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FF6B82;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 30%;
+      height: 1px;
+      background-color: #ccc;
+    }
+
+    .section-title::before {
+      left: 0;
+    }
+
+    .section-title::after {
+      right: 0;
+    }
+
+    .bundle-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: border 0.3s, background-color 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* button 10% off */
+
+    .btn{
+         width: 55px;
+      padding: 4px;
+      background-color: #FF6B82;
+      color: white;
+      font-size: 10px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+
+    }
+
+
+    .bundle-box.selected {
+      border: 2px solid #FF6B82;
+      background-color: #f2fef9;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .left input {
+      margin-right: 10px;
+      color: #FF6B82;
+    }
+
+    .middle h4 {
+      margin: 0;
+    }
+
+    .middle small {
+      text-decoration: line-through;
+      color: gray;
+      margin-left: 5px;
+    }
+
+    .tag {
+      background-color: #d1f2eb;
+      color: #FF6B82;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 10px;
+      
+    }
+
+    .discount {
+      font-weight: bold;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .dropdowns {
+      margin-top: 15px;
+      display: none;
+    }
+
+    .dropdowns select {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 5px;
+      
+    }
+
+    
+
+    .shipping {
+      color: #FF6B82;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .total {
+      text-align: right;
+      margin: 10px 0;
+      font-weight: bold;
+      margin-left: 70px;
+      color: #000;
+    }
+
+    .add-to-cart {
+      width: 100%;
+      padding: 15px;
+      background-color: #FF6B82;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .powered{
+        display: flex; 
+        margin-left: 200px;
+        color: gray;
+        font-size: 14px;
+    }
+
